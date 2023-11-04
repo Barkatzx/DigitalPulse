@@ -9,8 +9,21 @@ body {
   display: block;
 }
 
+.desktop-logo {
+  display: block;
+  text-align: center;
+}
+
+.desktop-contact {
+  display: block;
+}
+
 /* CSS for mobile version */
 .mobile-menu {
+  display: none;
+}
+
+.mobile-contact {
   display: none;
 }
 
@@ -19,9 +32,20 @@ body {
   .desktop-menu {
     display: none;
   }
+  .desktop-logo {
+    display: none;
+  }
+  .desktop-contact {
+    display: none;
+  }
+
   .mobile-menu {
     display: block;
     text-align: center;
+  }
+
+  .mobile-contact {
+    display: block;
   }
 
   .mobile-menu-content {
