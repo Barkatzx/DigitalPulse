@@ -18,16 +18,46 @@
   </head>
   <body class="animated fadeIn delay-5s">
     <!-- Navbar Start -->
-    <nav class="bg-sky-800 p-6">
+    <nav class="bg-sky-900 p-6">
       <div class="container mx-auto p-5">
         <div class="flex items-center justify-between">
           <div class="flex items-center">
             <a class="flex gap-3 items-center text-white">
-              <img alt="logo" src="/img/favicon.svg" class="w-10 h-10" />
-              <span class="text-4xl font-semibold">DigitalPulse</span>
+              <img
+                alt="logo"
+                src="/img/favicon.svg"
+                class="w-6 h-6 md:w-10 md:h-10"
+              />
+              <span class="text-2xl md:text-4xl font-semibold"
+                >DigitalPulse</span
+              >
             </a>
           </div>
-          <div class="hidden lg:flex" id="nav-menu">
+          <!-- Hamburger menu for mobile -->
+          <div class="lg:hidden mobile-menu" id="mobile-menu">
+            <button
+              id="mobile-menu-button"
+              class="text-white"
+              onclick="toggleMobileMenu()"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-8 h-8"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16m-7 6h7"
+                />
+              </svg>
+            </button>
+          </div>
+          <!-- Desktop version menu -->
+          <div class="lg:flex desktop-menu" id="nav-menu">
             <ul
               class="flex space-x-8 text-white animate__animated animate__fadeInDown animate__delay-5s"
             >
@@ -64,39 +94,77 @@
               </li>
             </ul>
           </div>
-          <div class="flex items-center">
-            <button
-              class="bg-blue-500 text-white text-xl px-10 py-4 rounded-2xl hover:bg-rose-600"
+        </div>
+        <!-- Mobile menu content -->
+        <div class="lg:hidden mobile-menu-content" id="mobile-menu-content">
+          <ul class="bg-sky-900 text-white pt-4">
+            <li>
+              <a class="text-2xl" href="#main-box" data-value="main-box"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a class="text-2xl" href="#about-box" data-value="profile-box"
+                >About</a
+              >
+            </li>
+            <li>
+              <a class="text-2xl" href="#services-box" data-value="services-box"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a class="text-2xl" href="#clients-box" data-value="clients-box"
+                >Clients</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-2xl"
+                href="#portfolio-box"
+                data-value="portfolio-box"
+                >Portfolio</a
+              >
+            </li>
+          </ul>
+          <!-- Mobile menu button -->
+          <div class="text-center mt-4">
+            <a
+              href="#"
+              class="bg-blue-500 text-white text-lg px-8 py-5 rounded-2xl hover-bg-rose-600"
             >
-              Contact Us
-            </button>
+              Contact Us <i class="fa-solid fa-arrow-right-long"></i>
+            </a>
           </div>
         </div>
       </div>
     </nav>
+
     <!-- Navbar End -->
 
     <!-- Hero Section Start -->
-    <header class="bg-sky-800">
+    <header class="bg-sky-900">
       <div class="container mx-auto p-5">
         <div class="flex flex-wrap justify-center items-center">
           <div class="lg:w-5/12 md:w-5/12 sm:w-full xs:w-full px-4">
             <h1
-              class="animate__animated animate__fadeInDown animate__delay-5s text-white text-7xl font-bold"
+              class="animate__animated animate__fadeInDown animate__delay-5s text-white text-4xl md:text-7xl font-bold text-center lg:text-left md:text-left sm:text-center xs:text-center"
             >
               We help you to grow your startup to the next level
             </h1>
             <p
-              class="animate__animated animate__fadeInDown animate__delay-5s text-white mt-4 text-xl"
+              class="animate__animated animate__fadeInDown animate__delay-5s text-white mt-4 text-lg md:text-xl text-center lg:text-left md:text-left sm:text-center xs:text-center"
             >
               We empower startups to elevate their growth and success to new
               heights. With our guidance and support, your startup can thrive
               and reach its full potential.
             </p>
-            <div class="flex gap-8">
+            <div
+              class="flex flex-col lg:flex-row md:flex-row sm:flex-col xs:flex-col gap-8 items-center lg:items-start md:items-start sm:items-center xs:items-center"
+            >
               <div>
                 <button
-                  class="mt-4 animate__animated animate__fadeInLeft animate__delay-5s hover:scale-105 transform duration-500 bg-blue-500 text-white text-xl px-10 py-6 rounded-xl hover:bg-rose-600"
+                  class="mt-4 animate__animated animate__fadeInLeft animate__delay-5s hover:scale-105 transform duration-500 bg-blue-500 text-white text-lg md:text-xl px-8 md:px-10 py-4 md:py-6 rounded-xl hover:bg-rose-600"
                 >
                   Learn More
                   <i class="fa-solid fa-arrow-right-long"></i>
@@ -104,7 +172,7 @@
               </div>
               <div>
                 <button
-                  class="mt-4 animate__animated animate__fadeInLeft animate__delay-5s hover:scale-105 transform duration-500 border-solid border-2 border-white text-white text-xl px-10 py-6 rounded-xl hover:bg-blue-500"
+                  class="mt-4 animate__animated animate__fadeInLeft animate__delay-5s hover:scale-105 transform duration-500 border-solid border-2 border-white text-white text-lg md:text-xl px-8 md:px-10 py-4 md:py-6 rounded-xl hover:bg-blue-500"
                 >
                   Talk to Sales
                 </button>
@@ -118,25 +186,164 @@
             <img
               src="img/landing-image.png"
               alt="header image"
-              class="animate__animated animate__fadeIn animate__delay-5s"
+              class="animate__animated animate__fadeIn animate__delay-5s w-full"
             />
           </div>
         </div>
-        <div class="pt-8 flex justify-between">
+        <div
+          class="pt-8 flex justify-between items-center flex-col md:flex-row"
+        >
           <div
-            class="animate__animated animate__fadeInDown animate__delay-5s text-2xl text-white items-center uppercase font-semibold"
+            class="animate__animated animate__fadeInDown animate__delay-5s text-2xl text-white items-center uppercase font-semibold text-center md:pb-5"
           >
             Trusted Partners
           </div>
-          <div class="flex gap-20">
-            <img src="/img/google.svg" alt="" />
-            <img src="/img/facebook.svg" alt="" />
-            <img src="/img/youtube.svg" alt="" />
-            <img src="/img/pinterest.svg" alt="" />
+          <div
+            class="flex justify-center items-center gap-5 md:gap-20 flex-col md:flex-row"
+          >
+            <img src="/img/google.svg" />
+            <img src="/img/facebook.svg" />
+            <img src="/img/youtube.svg" />
+            <img src="/img/pinterest.svg" />
           </div>
         </div>
       </div>
     </header>
+
     <!-- Hero Section End -->
+
+    <!-- Service Area Start -->
+    <div class="container mx-auto mt-10">
+      <div class="flex justify-between p-10">
+        <div class="text-6xl">
+          <h4 class="uppercase text-2xl font-bold text-blue-400">services</h4>
+          <h2 class="text-5xl font-bold">
+            High-impact services to improve your business
+          </h2>
+        </div>
+        <div>
+          <button
+            class="animate__animated animate__fadeInLeft animate__delay-5s hover:scale-105 transform duration-500 bg-blue-500 text-white text-lg md:text-xl px-8 md:px-10 py-4 md:py-6 rounded-xl hover:bg-rose-600 mb-4"
+          >
+            Get In Touch
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="container mx-auto mt-10 grid grid-cols-3 gap-8">
+      <!-- Card 1 -->
+      <div
+        class="bg-slate-100 hover:bg-slate-200 p-10 rounded-2xl shadow-2xl h-fit"
+      >
+        <div class="items-center mt-10">
+          <img src="/img/icon-1.svg" alt="Social" class="mb-10" />
+          <div>
+            <h2 class="text-4xl font-bold mb-10">Social Media Marketing</h2>
+            <p class="text-gray-500 text-xl font-semibold mb-10">
+              Social Media Marketing is a digital marketing strategy that
+              leverages social media platforms to promote products.
+            </p>
+          </div>
+          <hr class="border-solid border-2 border-slate-400" />
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div
+        class="bg-slate-100 hover:bg-slate-200 p-10 rounded-2xl shadow-2xl mt-12 h-fit"
+      >
+        <div class="items-center mt-10">
+          <img src="/img/icon-2.svg" alt="SEO" class="mb-10" />
+          <div>
+            <h2 class="text-4xl font-bold mb-10">SEO</h2>
+            <p class="text-gray-500 text-xl font-semibold mb-10">
+              Search Engine Optimization, is the practice of optimizing a
+              website or online content to improve its visibility in search
+              engine results.
+            </p>
+          </div>
+          <hr class="border-solid border-2 border-slate-400" />
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div
+        class="bg-slate-100 hover:bg-slate-200 p-10 rounded-2xl shadow-2xl mt-24 h-fit"
+      >
+        <div class="items-center mt-10">
+          <img src="/img/icon-3.svg" alt="Ad" class="mb-10" />
+          <div>
+            <h2 class="text-4xl font-bold mb-10">Paid Advertaising</h2>
+            <p class="text-gray-500 text-xl font-semibold mb-10">
+              Paid advertising, often referred to as online advertising, is a
+              marketing strategy in which businesses.
+            </p>
+          </div>
+          <hr class="border-solid border-2 border-slate-400" />
+        </div>
+      </div>
+      <!-- Card 4 -->
+      <div
+        class="bg-slate-100 hover:bg-slate-200 p-10 rounded-2xl shadow-2xl h-fit"
+      >
+        <div class="items-center mt-10">
+          <img src="/img/icon-4.svg" alt="Funnel" class="mb-10" />
+          <div>
+            <h2 class="text-4xl font-bold mb-10">Funnel Optimization</h2>
+            <p class="text-gray-500 text-xl mb-10 font-semibold">
+              FO is the process of refining and improving the steps that guide
+              potential customers from initial awareness to a final conversion
+              or sale.
+            </p>
+          </div>
+          <hr class="border-solid border-2 border-slate-400" />
+        </div>
+      </div>
+      <!-- Card 5 -->
+      <div
+        class="bg-slate-100 hover:bg-slate-200 p-10 rounded-2xl shadow-2xl mt-12 h-fit"
+      >
+        <div class="items-center mt-10">
+          <img src="/img/icon-5.svg" alt="Social" class="mb-10" />
+          <div>
+            <h2 class="text-4xl font-bold mb-10">Advance Analytics</h2>
+            <p class="text-gray-500 text-xl font-semibold mb-10">
+              Advanced analytics refers to the application of complex and
+              sophisticated data analysis techniques
+            </p>
+          </div>
+          <hr class="border-solid border-2 border-slate-400" />
+        </div>
+      </div>
+      <!-- Card 6 -->
+      <div
+        class="bg-slate-300 hover:bg-slate-400 p-10 rounded-2xl shadow-2xl mt-24 h-fit items-center text-center"
+      >
+        <div class="mt-10">
+          <img
+            src="/img/icon-6.svg"
+            alt="Social"
+            class="mb-10 justify-center"
+          />
+          <div>
+            <h2 class="text-4xl font-bold mb-10">Browse All Services</h2>
+            <p class="text-gray-500 text-xl font-semibold mb-10">
+              This section often includes detailed descriptions, pricing
+              information, and links for users.
+            </p>
+            <button
+              class="animate__animated animate__fadeInLeft animate__delay-5s hover:scale-105 transform duration-500 bg-blue-500 text-white text-lg md:text-xl px-8 md:px-10 py-4 md:py-6 rounded-xl hover:bg-rose-600 mb-4"
+            >
+              Browse All
+            </button>
+          </div>
+          <hr class="border-solid border-2 border-slate-400" />
+        </div>
+      </div>
+
+      <!-- Repeat the above structure for more cards -->
+    </div>
+
+    <!-- Service Area End -->
+    <script src="/script.js"></script>
   </body>
 </html>

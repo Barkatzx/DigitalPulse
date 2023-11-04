@@ -3,3 +3,28 @@
 body {
   font-family: "Poppins", sans-serif;
 }
+
+/* CSS for desktop version */
+.desktop-menu {
+  display: block;
+}
+
+/* CSS for mobile version */
+.mobile-menu {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  /* Adjust styles for mobile devices */
+  .desktop-menu {
+    display: none;
+  }
+  .mobile-menu {
+    display: block;
+    text-align: center;
+  }
+
+  .mobile-menu-content {
+    display: none;
+  }
+}
