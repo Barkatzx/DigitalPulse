@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/img/favicon.svg" type="image/x-icon" />
+
+    <title>Social Media Agency</title>
+
+    <!-- Tailwind CSS CDN Link Added Here And Other Css Link -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/animate.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/67ef68511d.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="animated fadeIn delay-5s">
+    <!-- Navbar Start -->
+    <nav class="bg-sky-800 p-6">
+      <div class="container mx-auto p-5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center">
+            <a class="flex gap-3 items-center text-white">
+              <img alt="logo" src="/img/favicon.svg" class="w-10 h-10" />
+              <span class="text-4xl font-semibold">DigitalPulse</span>
+            </a>
+          </div>
+          <div class="hidden lg:flex" id="nav-menu">
+            <ul
+              class="flex space-x-8 text-white animate__animated animate__fadeInDown animate__delay-5s"
+            >
+              <li>
+                <a class="text-xl" href="#main-box" data-value="main-box"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a class="text-xl" href="#about-box" data-value="profile-box"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-xl"
+                  href="#services-box"
+                  data-value="services-box"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a class="text-xl" href="#clients-box" data-value="clients-box"
+                  >Clients</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-xl"
+                  href="#portfolio-box"
+                  data-value="portfolio-box"
+                  >Portfolio</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="flex items-center">
+            <button
+              class="bg-blue-500 text-white text-xl px-10 py-4 rounded-2xl hover:bg-rose-600"
+            >
+              Contact Us
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Hero Section Start -->
+    <header class="bg-sky-800">
+      <div class="container mx-auto p-5">
+        <div class="flex flex-wrap justify-center items-center">
+          <div class="lg:w-5/12 md:w-5/12 sm:w-full xs:w-full px-4">
+            <h1
+              class="animate__animated animate__fadeInDown animate__delay-5s text-white text-7xl font-bold"
+            >
+              We help you to grow your startup to the next level
+            </h1>
+            <p
+              class="animate__animated animate__fadeInDown animate__delay-5s text-white mt-4 text-xl"
+            >
+              We empower startups to elevate their growth and success to new
+              heights. With our guidance and support, your startup can thrive
+              and reach its full potential.
+            </p>
+            <div class="flex gap-8">
+              <div>
+                <button
+                  class="mt-4 animate__animated animate__fadeInLeft animate__delay-5s hover:scale-105 transform duration-500 bg-blue-500 text-white text-xl px-10 py-6 rounded-xl hover:bg-rose-600"
+                >
+                  Learn More
+                  <i class="fa-solid fa-arrow-right-long"></i>
+                </button>
+              </div>
+              <div>
+                <button
+                  class="mt-4 animate__animated animate__fadeInLeft animate__delay-5s hover:scale-105 transform duration-500 border-solid border-2 border-white text-white text-xl px-10 py-6 rounded-xl hover:bg-blue-500"
+                >
+                  Talk to Sales
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="lg:w-7/12 md:w-7/12 sm:w-full xs:w-full"
+            id="header-photo"
+          >
+            <img
+              src="img/landing-image.png"
+              alt="header image"
+              class="animate__animated animate__fadeIn animate__delay-5s"
+            />
+          </div>
+        </div>
+        <div class="pt-8 flex justify-between">
+          <div
+            class="animate__animated animate__fadeInDown animate__delay-5s text-2xl text-white items-center uppercase font-semibold"
+          >
+            Trusted Partners
+          </div>
+          <div class="flex gap-20">
+            <img src="/img/google.svg" alt="" />
+            <img src="/img/facebook.svg" alt="" />
+            <img src="/img/youtube.svg" alt="" />
+            <img src="/img/pinterest.svg" alt="" />
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Hero Section End -->
+  </body>
+</html>
